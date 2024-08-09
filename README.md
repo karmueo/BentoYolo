@@ -1,19 +1,13 @@
-# Project Title
+# 基于Bentoml搭建的Yolo后端
 
 ## Table of Contents
 
 - [About](#about)
-- [Getting Started](#getting_started)
 - [Usage](#usage)
-- [Contributing](../CONTRIBUTING.md)
 
 ## About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
-
-## Getting Started <a name = "getting_started"></a>
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+使用Bento实现YoloV8的后端服务
 
 ### Prerequisites
 
@@ -65,6 +59,6 @@ bentoml containerize yolo_v8:latest
 运行生成的容器镜像：
 
 ```bash
-# latest可能需要修改为实际的id，注意打印输出内容
-docker run --rm -p 5500:5200 yolo_v8:latest
+# `tlbwutcwckzpgx2t`需要修改为实际的id，注意打印输出内容
+docker run --rm -p 5500:5200 yolo_v8:tlbwutcwckzpgx2t
 ```

@@ -1,15 +1,16 @@
 service: "service:YoloV8"
-labels:
+labels: # labels是与对象关联的键值对。这些标签可用于多种目的，例如对 Bento 和模型进行识别或分类。
   owner: bentoml-team
   stage: demo
-include:
+include: # include字段来包含特定文件。将其设置为 *.py 意味着目录下的每个 Python 文件都将被打包到 Bento 中。
  - "*.py"
  - "*.pt"
-python:
+python: # 可以使用 python.packages 字段指定给定 Bento 所需的 Python 包。 BentoML 允许您指定所需的版本并从自定义 PyPI 源或 GitHub 存储库安装包。如果包缺少特定版本，BentoML 将在构建 Bento 时锁定当前平台和 Python 的所有 Python 包的版本。
   requirements_txt: "./requirements.txt"
-docker:
-  system_packages:
+docker: # 部署到 Docker 容器
+  system_packages: # 将安装在容器中的系统包。
     - libglib2.0-0
     - libsm6
     - libxext6
     - libxrender1
+    - libgl1-mesa-glx

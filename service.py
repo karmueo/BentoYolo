@@ -73,7 +73,7 @@ class Base64Image(BaseModel):
 # 使用装饰器@bentoml.service来注释一个类，表明它是一个BentoML服务
 @bentoml.service(
     resources={"gpu": 1},
-    http={"port": 5000},
+    http={"port": 5200},
     traffic={"timeout": 10},
 )
 class YoloV8:
